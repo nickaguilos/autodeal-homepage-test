@@ -1,0 +1,97 @@
+html,
+body,
+*{
+    font-family: "Inter UI", "Helvetica Neue", sans-serif;
+}
+
+/*nav bar*/
+.bg-light{
+    background: #fff!important;
+}
+
+.navbar-brand{
+    margin-right: 3rem;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link{
+    padding-right: .7rem;
+    padding-left: .7rem;
+}
+
+.nav-link{
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.navbar-light .navbar-toggler{
+    border: unset;
+}
+
+
+.navbar-light .navbar-nav .active>.nav-link, 
+.navbar-light .navbar-nav .nav-link.active, 
+.navbar-light .navbar-nav .nav-link.show, 
+.navbar-light .navbar-nav .show>.nav-link{
+    color: #FF4906;
+}
+
+.navbar-nav {
+    margin-top: 20px;
+    text-align: center;
+}
+.nav-item{
+    padding: 10px 10px;
+    border-top:1px solid #ededed;
+}
+.nav-item:last-child{
+    border-bottom:1px solid #ededed;
+    margin-bottom: 10px;
+}
+
+.d-inline{
+    display: block;
+    text-align: center;
+    
+}
+
+.d-inline a{
+    width: 100%;
+}
+
+
+/* @media (min-width: 768px) { ... } */
+
+@media (min-width: 992px) { 
+    .navbar-nav {
+        margin-top: 0px;
+        text-align: left;
+    }
+    .nav-item{
+        padding: 0;
+        border-top:unset;
+    }
+    .nav-item:last-child{
+        border-bottom:unset;
+    }
+ }
+
+/* @media (min-width: 1200px) { ... } */
+
+
+
+
+/*common*/
+.btn{
+    font-weight: bold;
+    font-size: 14px;
+    border: unset;
+}
+
+.btn-primary{
+    background: #FF4906;
+}
+
+.btn-primary:hover{
+    background: #FF8700;
+}
