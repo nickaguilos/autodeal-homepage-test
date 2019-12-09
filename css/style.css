@@ -9,13 +9,21 @@ body,
     background: #fff!important;
 }
 
+.navbar{
+    position: fixed;
+    z-index: 9;
+    width: 100%;
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
+}
+
 .navbar-brand{
     margin-right: 3rem;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link{
-    padding-right: .7rem;
-    padding-left: .7rem;
+    padding-right: .5rem;
+    padding-left: .5rem;
 }
 
 .nav-link{
@@ -60,9 +68,108 @@ body,
 }
 
 
-/* @media (min-width: 768px) { ... } */
+/*typography*/
+h1{
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+}
 
-@media (min-width: 992px) { 
+/*hero Area*/
+.heroSection .owl-item{
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.heroSection p{
+    color: #fff;
+    margin-bottom: 20px;
+    line-height: 1.5            ;
+}
+
+.heroSection .owl-item:before{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: "";
+    background: rgba(0,0,0,0.5);
+    z-index: 0;
+}
+
+.heroSection .owl-item > div{
+    height: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.owl-carousel{
+    position: relative;
+}
+
+
+
+.owl-carousel .owl-nav{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0px 50px;
+    color: rgba(225,225,225,0.5);
+    font-size: 35px;
+    display: none;
+}
+
+
+.owl-carousel .owl-nav:hover{
+    color: rgba(225,225,225,1);
+}
+
+.owl-carousel .owl-dots{
+    position: absolute;
+    bottom: 17%;
+    text-align: center;
+    width: 100%;
+}
+
+.owl-carousel button.owl-dot{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background: rgba(225,225,225,0.5);
+    margin: 7px;
+}
+
+.owl-carousel button.owl-dot.active{
+    background: rgba(225,225,225,1);
+}
+
+
+
+
+@media (min-width: 768px) { 
+    h1{
+        font-size: 72px;
+    }
+    .owl-carousel .owl-nav{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+ @media (min-width: 992px) { 
     .navbar-nav {
         margin-top: 0px;
         text-align: left;
@@ -76,16 +183,13 @@ body,
     }
  }
 
-/* @media (min-width: 1200px) { ... } */
-
-
-
 
 /*common*/
 .btn{
     font-weight: bold;
     font-size: 14px;
     border: unset;
+    padding: 10px 40px;
 }
 
 .btn-primary{
@@ -94,4 +198,12 @@ body,
 
 .btn-primary:hover{
     background: #FF8700;
+}
+
+.btn-secondary{
+    background: #222;
+}
+
+.btn-secondary:hover{
+    background: #888;
 }
